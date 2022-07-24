@@ -1,0 +1,25 @@
+{
+  "books": [
+    {
+      "title": "Introduction to Autonomous Robots, 3rd Edition",
+      "price": "$20.99",
+      "image": "https://itbook.store/img/books/9781493773077.png",
+      "quantity": 4,
+      "id": 1
+    },
+    {
+      "title": "Functional Programming in Kotlin",
+      "price": "$18.63",
+      "image": "https://itbook.store/img/books/9781617297168.png",
+      "quantity": 3,
+      "id": 2
+    },
+    {
+      "title": "Learning Go",
+      "price": "$35.88",
+      "image": "https://itbook.store/img/books/9781492077213.png",
+      "quantity": 1,
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+:root{
+  --primary: #371B58;
+  --secondary: #4C3575;
+  --third: #5B4B8A;
+  --fouth: #7858A6;
+  --fifth: #270082;
+
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav_bar{
+  background: url('/images/1111.svg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+.nav_bar h1{
+  color: #ccc;
+  font-family: 'Quicksand';
+  font-weight: bold;
+}
+.menu_btn {
+  border: #ccc;
+}
+.nav_items {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  display: none;
+  z-index: 10;
+  text-align: left;
+  padding: 20px;
+  height: 100vh;
+  padding-top: 5rem;
+  width: 200px;
+}
+.nav_items li {
+  margin-top: 2rem;
+}
+.nav_items.show_hide{
+  display: block !important;
+}
+.nav_bar li a{
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.logo{
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.search input {
+  width: 85%;
+  max-width: 700px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 5px;
+}
+.search input:focus{
+  background: #ccc;
+}
+.header{
+  width: 100vw;
+  margin-bottom: 2rem;
+}
+.header .h-img{
+  height: 400px;
+    background: url(../images/ria-OobxlWxuLaA-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+}
+.header .h-text {
+  color: green;
+  font-weight: bold;
+  -webkit-text-stroke-width: 2px;
+  font-family: 'Quicksand';
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  transform: translate(0, -150%);
+  height: 200px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+
+}
+.header .h-text h1{
+  border-bottom: 3px solid #ccc;
+}
+.cart a{
+  text-decoration: none;
+  color: white
+}
+.books {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 10px;
+  margin: 10px;
+  align-items: center;
+  margin-left: 2rem;
+
+}
+
+.books article{
+  border: 2px solid black;
+  border-radius: 3px;
+  max-width: 250px;
+  padding: 0;
+  background-color: #cedbe1;
+}
+.books article img {
+  width: 100%;
+  object-fit: cover;
+}
+.books article .shop {
+  background: url(/images/wave-haikei.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -50px;
+}
+article h2 {
+  font-size: 0.85rem;
+}
+.shop {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--primary);
+  padding-top: 2px;
+}
+.shop button {
+  border: none;
+  border-radius: 4px;
+  background: var(--fouth);
+  color: white;
+  padding: 5px;
+  margin-bottom: 2px;
+  height: 35px;
+}
+button a {
+  color: white;
+  text-decoration: none;
+}
+.cart_book{
+  margin: 0 auto;
+}
+.quantity span {
+  border: 1px solid black;
+  padding: 4px;
+}
+.quantity button {
+  padding:1px 4px;
+}
+.footer {
+  height: 200px;
+  background: #7661f5;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .books article .shop {
+      background-position-y: -65px;
+    }
+    .bookcontent article .content{
+      margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+  .books {
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 10px
+  }
+    .books article .shop {
+      background-position-y: -40px;
+    }
+    .bookcontent{
+      margin-top: 1rem;
+      height: 550px;
+      width: 750px;
+      overflow: scroll;
+    }
+    .bookcontent::-webkit-scrollbar{
+      display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+  .items {
+    display: none;
+  }
+
+  .books {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 10px;
+  }
+    .bookcontent {
+      margin-top: 1rem;
+      width: 300px;
+      overflow: scroll;
+    }
+    .bookcontent::-webkit-scrollbar-thumb{
+      display: none;
+    }
+    .bookcontent article {
+      flex-direction: column;
+    }
+}
